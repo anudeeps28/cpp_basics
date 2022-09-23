@@ -2,8 +2,11 @@
 using namespace std;
 
 class Machine {
+private:
+    int id;
 public:
-    Machine() {cout << "Maehinc no-argument constructor called" << endl; }
+    Machine(): id(0) {cout << "Maehinc no-argument constructor called" << endl; }
+    void info() {cout << id<< endl;}
 };
 
 class Vehicle : public Machine{ // this means that vehicle is a sub-class of Machine
@@ -19,5 +22,7 @@ int main() {
      * when object of Vehicle is called, the constructor of both vehicle or machine is called
      * This is evident in the output
      */
+
+    vehicle.info(); // vehicle will inherit the method 'info' in machine class
     return 0; 
 }
