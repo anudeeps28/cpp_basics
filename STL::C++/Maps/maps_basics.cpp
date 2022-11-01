@@ -39,23 +39,23 @@ int main() {
 
     // some important function on map
 
-    // // 1. find = O(long(n))
-    // m.find(3); // this returns an iterator
-    // auto it = m.find(3);
+    // 1. find = O(long(n))
+    m.find(3); // this returns an iterator
+    auto it = m.find(3);
 
-    // if (it == m.end()) {
-    //     cout << "NO Value";
-    // } else {
-    //     cout << (*it).first << " " << (*it).second << endl;
-    // }
+    if (it == m.end()) {
+        cout << "NO Value";
+    } else {
+        cout << (*it).first << " " << (*it).second << endl;
+    }
 
-    // auto itt = m.find(7);
+    auto itt = m.find(7);
 
-    // if (itt == m.end()) {
-    //     cout << "NO Value";
-    // } else {
-    //     cout << (*itt).first << " " << (*itt).second;
-    // }
+    if (itt == m.end()) {
+        cout << "NO Value";
+    } else {
+        cout << (*itt).first << " " << (*itt).second;
+    }
 
     // 2. erase
     m.erase(3); // O(log( n))
