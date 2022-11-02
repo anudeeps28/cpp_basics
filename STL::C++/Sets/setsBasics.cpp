@@ -1,5 +1,6 @@
 #include <iostream>
 #include <set>
+#include<unordered_set>
 
 using namespace std;
 
@@ -9,15 +10,28 @@ void print(set<string> &s) {
     }
 }
 
+void print(unordered_set<int> &s2) {
+    for (auto value: s2) {
+        cout << value << endl;
+    }
+}
 int main() {
     set<string> s; // we can make a set of anything, just like a map/vector
     s.insert("abc");
     s.insert("zsfds");
     s.insert("bycdf");
 
-    print(s);
+    unordered_set<int> s2;
+    s2.insert(1); 
+    s2.insert(4);
+    s2.insert(2);
+    s2.insert(7);
+    s2.insert(5);
 
-    auto it = s.find("abc");
+    print(s);
+    print(s2);
+
+    auto it = s.find("abc"); 
     s.erase(it);
     print(s);
 
