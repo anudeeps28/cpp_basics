@@ -23,6 +23,7 @@ int main () {
         bags.insert(candy_count);
     }
 
+    // calculating the total candies he can eat in k minutes
     long long total_candies = 0;
     for (int i = 0; i < k; i++) {
         auto last_iterator = (--bags.end()); // just before the last of .end() because .end() gives the iterator of just after the last 
@@ -32,7 +33,7 @@ int main () {
         // now erasing that bag
         bags.erase(last_iterator); // O(1) when we provide the iterator, when we provide value, it is O(lon(n))
 
-        // also inserting x/2 
+        // also inserting a bag of candies x/2 in set of bags
         bags.insert(candy_count/2); // when we insert, it will automatically go into the sorted order
     }
 
