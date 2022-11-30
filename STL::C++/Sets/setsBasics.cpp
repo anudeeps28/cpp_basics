@@ -10,6 +10,14 @@ void print(set<string> &s) {
     }
 }
 
+/***
+ * Another method of printing
+ * for (auto it = s.begin(); it != s.end(); it++) {
+ *      cout << (*it) << endl;
+ * } 
+*/
+
+
 void print2(unordered_set<int> &s) {
     for (auto value: s) {
         cout << value << endl;
