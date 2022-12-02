@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-bool cmp(int a, int b) {
+bool cmp(int a, int b) { // this is similar to lambda function
     return a > b; // return the condition that you want to implement
 }
 
