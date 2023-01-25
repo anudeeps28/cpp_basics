@@ -16,6 +16,12 @@ int main() {
     for (int value: v) { // writing for loop is so easy = it becomes so small
         cout << value << endl;
     }
+    
+    // the above written lines 15->18 are equivallent to:
+    for (auto i = v.begin(); i != v.end(); i++) {
+        cout << *i << endl;
+    }
+
 
     // the values are passed by copy, not by reference
     for (int value: v) { 
