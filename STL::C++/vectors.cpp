@@ -6,7 +6,7 @@ using namespace std;
 // vectors = arrays + dynamic size
 
 void printVector(vector<int> vec) { // we are passing by value, so we are copying, hence it is an expensive operation
-    cout << "Size of vector" << vec.size() << endl;
+    cout << "Size of vector" << vec.size() << endl; // v.size() -> O(1)
 
     for (int i = 0; i < vec.size(); i++) {
         cout << vec[i] << endl;
@@ -41,14 +41,14 @@ int main() {
 
     // we can change the length of the vector
     // even if we declare it with some other size
-    vector<int> v11(10); // vector of size 10
+    vector<int> v11(10); // vector of size 10, all of whose values are 0
     vector<int> sfsd(10, 3); // vector of size 10 all of whose values are 3
     v11.push_back(7);
     printVector(v11);
     v11.pop_back(); // removes value from the back; complexity = O(1)
     printVector(v11);
     
-    // copying the vector; complexity = O(n)
+    // copying the vector(not possible in arrays); complexity = O(n)
     vector<int> v100 = v; // we cannot do this arrays
     v100.push_back(5);
     printVector(v);
