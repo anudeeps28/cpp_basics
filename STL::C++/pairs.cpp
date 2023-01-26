@@ -35,7 +35,7 @@ int main() {
     }
 
     // for swapping, we don't need to write long loops
-    swap(p_array[1], p_array[2]);
+    swap(p_array[1], p_array[2]); // swap is a in - built function in STL used to swap the values of 2 variables
     for (size_t i = 0; i < 3; i++) {
         cout << p_array[i]. first << " " << p_array[i].second << endl;
     }
