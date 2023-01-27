@@ -58,7 +58,7 @@ int main() {
     // vector of vector = 2-D array/matrix
     // = both the number of rows and columns are dynamic
     
-    vector<vector<int>> v4;
+    vector<vector<int>> v4; // this is like a 2-D array
     // in this: v4[0][1] = element at 1st position of inner vector at 0th position of the outer vector.
     cout << "enter size of bigger vector (column of matrix): " << endl;
     int N2;
