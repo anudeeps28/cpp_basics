@@ -11,6 +11,7 @@ public:
     void jump() {cout << "Cat jumping!" << endl;} // additional method jump of cat
 };
 
+// multi-level inheritance 
 class Tiger: public Cat { // tiger is a sub class of cat, and also a sub class of animal
 public:
     void attack() {cout << "Attacking...!" << endl;}
