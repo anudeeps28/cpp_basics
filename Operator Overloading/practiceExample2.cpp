@@ -39,9 +39,9 @@ class Box
         {
             return ((long long)l*b*h);
         }
-        friend bool operator < (Box& b1, Box& b2)
+        bool operator < (Box& B)
         {
-            if((b1.l < b2.l) || (b1.l == b2.l && b1.b < b2.b) || (b1.l == b2.l && b1.b == b2.b && b1.h < b2.h))
+            if((l < B.l) || (l == B.l && b < B.b) || (l == B.l && b == B.b && h < B.h))
             return(true);
             else
             return(false);
