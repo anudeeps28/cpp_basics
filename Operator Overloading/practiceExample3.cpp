@@ -1,55 +1,49 @@
-#include<iostream>
-#include<vector>
-using namespace std;
+// Problem 1: Vector addition and subtraction
+
+#include <iostream>
 
 class Vector {
 public:
-    Vector();
-    void addElements();
-    void showElements(); 
-    vector<int> addVectors(vector<int> A, vector<int> B);
-private: 
-    vector<int> v;
+  // Vector(double x, double y, double z) : x(x), y(y), z(z) {}
+  Vector(double x, double y, double z){ // constructor
+    this->x = x;
+    this->y = y;
+    this->z = z;
+  } 
+
+  Vector operator+(const Vector& other) const {
+    return Vector(x + other.x, y + other.y, z + other.z);
+  }
+
+  Vector operator-(const Vector& other) const {
+    return Vector(x - other.x, y - other.y, z - other.z);
+  }
+
+  void print() const {
+    std::cout << "(" << x << ", " << y << ", " << z << ")\n";
+  }
+
+private:
+  double x, y, z;
 };
 
-// Vector::Vector() {
-//     vector<int> numbers;
-
-// }
-
-vector<int> operator+(vector<int> va, vector<int> vb) {
-    vector<int> addedVector;
-    for (int i = 0; i < va.size(); i++) {
-        int x = va[i] + vb[i];
-        addedVector.push_back(x);
-    }
-    return addedVector;
-}
-
-void Vector::addElements() {
-    int numberOfElements;
-    cin >> numberOfElements;
-    for (int i = 0; i < numberOfElements; i++) {
-        int x;
-        cin >> x;
-        v.push_back(x);
-    }
-}
-
-void Vector::showElements() {
-    for (int i = 0; i < v.size(); i++) {
-        cout << v[i] << endl;
-    }
-}
-
-
 int main() {
-    vector<int> x = {1,2,3,4};
-    vector<int> y = {1,2,3,4};
+  Vector v1(1, 2, 3);
+  Vector v2(4, 5, 6);
 
-    vector<int> answer = x + y;
+  std::cout << "v1 = ";
+  v1.print();
 
-    for (auto i: answer) {
-        cout << i << " ";
-    }
+  std::cout << "v2 = ";
+  v2.print();
+
+  Vector v3 = v1 + v2;
+  std::cout << "v1 + v2 = ";
+  v3.print();
+
+  Vector v4 = v1 - v2;
+  std::cout << "v1 - v2 = ";
+  v4.print();
+
+  return 0;
 }
